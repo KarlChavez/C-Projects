@@ -1,73 +1,7 @@
 Learning Linux, editing text,  
 makefiles, and the debugger
 
-Part 0: Logging in and choosing an editor 
-
-I’m including this part because I think it’s really important to make an informed decision about 
-what sort of text editor you’re going to be using for this class. There are lots of options 
-(including vi, gedit, nano, emacs, and more). I recommend either vi or gedit, but primarily vi. 
-What follows is copied from Prof. Kirby: 
-“Right now you need to pick which editor you will use. In piazza in the General Resources section are 
-two vi tutorials . The original editor was vi. That was updated to vim, but “vi” as a command on stdlinux 
-aliases to vim and that is a good thing. There is also gedit. 
-There are 2 links to vi tutorials in the General Resources section of the resources page in piazza. The 
-reason I push vi is that once you master it, you are faster the people who use gedit. Time is one of your 
-most precious resources in this class. Be sure to do most of you editing in edit mode to take advantage 
-of vi’s power. (That means hit escape and navigating instead of staying in insert mode all of the time and 
-using only the arrow keys). 
-Gedit has appreciably no learning curve. It’s so easy we know you can look at the interface and figure it 
-out. Gedit is by nature graphical, so you need FastX running or you are doomed. 
-The vi editor will run in a command window, so no FastX is needed. If you are using putty, vi may be 
-your best choice. I personally develop on 4 putty windows, which fits in and fills a decent sized monitor. 
-I use 1 for running make, another for testing code and 2 have vi to edit code. 
-Tradeoffs: 
-• Vi is strictly keyboard biased, so there is no reaching for a mouse. A decent typist in vi edits more 
-quickly because they never take their fingers out of the keyboard. Gedit requires constant 
-mousekeyboard switching. 
-• Vi will run without an X server, so if you have slow link speeds the low resource demand of PuTTY and 
-vi may be your only choice. 
-• Vi has some capabilities that gedits doesn’t have, like changing the indent level of an entire block of 
-code with a 2 keystroke sequence”>%” instead of multiple lines of mouse / keyboard /tab / click 
-madness. 
-• Vim color codes text and will color code mismatches on open/close parentheses and braces. • Vi 
-understands tags, allowing you to jump to the definition of a function from any point in the code where 
-the function is called using ^] (control right bracket). 
-• Gedit is dirt simple but you have to teach yourself vi. If you are using vi and forget that you are in edit 
-mode and not insert mode, your keystrokes all have meanings and the act of typing text will do strange 
-and unpleasant things to your file, especially if you look at your keyboard when you type instead of at 
-the screen. Vim has multiple undo levels so that’s not as scary as it used to be. Using gedit means 
-getting something done right now today but being slower all semester. Using vi means teaching yourself 
-one more thing early on and buying extremely precious time for labs 3 and 4.” 
-I also took the liberty of ripping those vi resources he talked about and put them on Carmen. 
-They will come in handy! 
- 
-Something else you should do before getting started on the lab is creating your readme file. 
-Simply create a file called “readme” and include your name at the top. As you progress through 
-the lab, you may see different parts (labeled things like Part 1). When you see this, write it 
-down in your readme. While in a numbered part of a lab, you’ll come across various questions, 
-prepended with a bolded Q and a number (such as Q5). When you see this, include the Q and 
-the number, along with you answer to the question(s) in the file. A brief example: 
-Name: Rob LaTour 
-I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the 
-undergraduate graders. 
-
-Part 1: 
-Q1: Don’t make fun of me, but my favorite color is gray 
-Q2: The definitive answer is that Han did shoot first. The original version is the one that captured the 
-heart of the public, and thus the director lost creative control. In this essay I will... 
-Part 1: A quick and easy C program 
-Remember not to copy and paste code from slides or lab descriptions, because you’ll get 
-different characters from what you’re expecting and things will break. You’ll need to type this 
-stuff manually! 
-Create a file called lab1.c and make it look like this: 
- 
-(Side note, you can change the color scheme of vim by using the :color command. This one is 
-called “evening”) 
-Please replace the first line with your name and provide a different name for the function called 
-pleaseFatherGiveMeAName. 
-Remember to include a newline at the end of every file! 
- 
-Create a file called customheader.h and make it look like this: 
+Part 1:
  
 Now we’re gonna compile this program (this is a one-line command): 
 [latour.2@cse fl1 cse2421]$ gcc -ansi -pedantic -Wimplicit-function-declaration 
