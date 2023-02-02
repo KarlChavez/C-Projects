@@ -1,20 +1,8 @@
-This lab contains three parts. 
- 
-Something you should do before getting started on the lab is creating your readme file. Simply 
-create a file called “readme” and include your name at the top. As you progress through the 
-lab, you may see different parts (labeled things like Part 1). When you see this, write it down in 
-your readme. While in a numbered part of a lab, you’ll come across various questions, 
-prepended with a bolded Q and a number (such as Q5). When you see this, include the Q and 
-the number, along with you answer to the question(s) in the file. A brief example: 
-Name: Braeden J 
-I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the 
-undergraduate graders. 
-Part 1: 
-Q1: My favourite colour is white. Make fun of me. 
-Q2: While Han did shoot first, prior to the shot being fired Greedo issued a threat in Huttese. This makes 
-Han’s actions morally permissible. In this essay I will... 
- 
-Part 1: Implementing Stack or Queue 
+Learning function pointers, timing, 
+and profiling 
+
+Part 1: Implementing Stack or Queue
+
 For this lab, there’s a header file provided, as well as some source code. This lab is meant to be 
 a relatively chill (but still interesting) one after the absolute unit that last lab was. Included in 
 the header file is the beginnings of two different implementations of a stack and two different 
