@@ -1,0 +1,29 @@
+Name: KarlChavez
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+
+Q1: My first test file consisted of a file with much more than 8 characters filled with spaces. The first test covered potential failures like files over 8 spaces since the encryption can only read 8 characters at a time. The second test file represented a boundary case. Furthermore, I provided spaces in between words to check how my program would handle spaces. My second test file consisted of a file with equal spaces and characters. The second test covered duplicate characters and the same characters back to back. The second test file represented a routine case. The third test consisted of more repetitive numbers with numerous new lines. The third test covered new line errors and empty lines. The third test represented a challenging case. The fourth and final file consisted of 0 characters and 0 lines. Essentially a blank file. This tested how the program would react with an empty file and the result should be just returning an empty file. This is a boundary case.
+
+Q2: I chose the characters that I did because I wanted them unique, random, and covering as many boundaries as possible. I made a capital letter, a punctuation mark, two spaces next to each other, a period at the end, and only typing 7 characters because linux adds one extra character which totals up to be 8 characters. This sequence of characters is supposed to combine routine, boundary, and challenging case.
+
+Q3: In my functions, I used an array to shift the bytes. However, this encryption scheme could be modified quickly and easily by using algorithms like quick sort, merge sort, etc. My function’s running time is around n and having faster algorithms like quick sort could make the running time log(n) which will be quicker.
+
+Q4: There are possibly cases where my functions would run quicker than the algorithms mentioned above like quick sort or merge sort. Maybe my functions are more efficient with smaller files. If that’s the case, we could generalize our code such that when we receive a small file to encrypt, it uses my function. When we come across a much larger file with millions of characters, we could switch to quick sort or merge sort. Switching between schemes depending on the file sizes is how we could generalize our code.
+
+Part 2: Decryption
+
+Q1: One possibility that something unexpected could happen is that the most significant bit on the 7th character contains a 1 and this would produce a character that is above the 127 characters of the ASCII. Furthermore, you could end up with leading 1’s when you do right shifts. That is because C doesn’t have a syntactic way of differentiating logic right shifts and arithmetic right shifts. The only way to find out is by experimenting.
+
+Q2: One way to resolve the right shifting issue in Q1 is just being consistent on the types you are using. For example, I represented my characters as integers and since there are no positive or negative signs in characters, they are technically “unsigned”. Meaning, I could do right shifts and have no unexpected leading 1’s. If you are consistent on the types you are shifting and know how to solve the issues that arise with them, then it should work as intended to.
+
+Part 3: Making the graders’ eyes bleed
+
+Q1: I chose to mangle a copy of my encryption code. The reason being is because I had less “work” to do in my encryption and it would decrease my chances of making an error compared to if I mangled a function with more lines. 
+
+Q2: At the time of writing this question, I would easily understand how this code functions because I spent hours working on it. However, if I were to read this several months or years from now, it would be much more difficult. One being I would not know what loops are running and second, not know the context of the problem.
+
+Q3: It would be much harder to go from unreadable code to good code than vice versa. The reason being is because it’s a lot harder to track what loops, functions, or variables are operating. It’s more difficult to condense unreadable code because most of the time you don’t know what you are even trying to condense. Its so jumbled up that it’s strenuous to piece it all back up. If you were to go from good to bad, it would be easier because you can debug throughout. You could “scramble” your code in one part and run to check if it still works.
+
+Q4: We are assuming that before our encryption, the most significant bit, or the left most bit, is a zero. Furthermore, if we are assuming that the most significant bit is 0, then we are assuming that we are only obtaining ASCII characters from 0 to 127.
+
+Q5: If the assumption is not true, then encryption and decryption could unexpectedly fail. For the most part, it would be difficult decrypting. That is because the decryption assumes that the starting bit was a 0. So we replace the result with a 0 and it will be a totally different output than before encryption. The significant bit which is 1 would change to 0 and it would cause problems. Some parts of the process that could fail is lining up the 8th character to the 7 characters. Furthermore, decrypting characters past 127 would be extremely messy and the output may or may not be characters with leading 0's. 
