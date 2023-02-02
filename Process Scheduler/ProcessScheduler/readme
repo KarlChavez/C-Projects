@@ -1,0 +1,39 @@
+INTRUCTIONS FOR THE LAB
+
+1. Create files for each process you want. (i.e, type "vi proccess1" to create a file for process1)
+
+2. Write the CPU burst and arrival time for each process inside the file. 
+   The CPU burst should be in the first line of the file and the arrival time should be in the next new line right below it.
+   There should be 2 lines of code for each file.
+   
+   (i.e, this file has a CPU burst of 3 and an arrival time of 4) 
+   3
+   4
+	
+   Check the "process1" file to see how it is formatted.
+
+3. Type "make" in case "lab4" is not up to date.
+
+4. Type "lab4 " + all the names of the processes you want to run in the CPU scheduler with a space in between each one.   
+	
+   (i.e, I will run lab4 with proccess1, proccess2, process3, and process4)
+
+   "lab4 process1 process2 process3 process4" 
+
+5. After running the line on step 4, you should see an output of the average wait and turn around times for each four CPU algorithms which
+   are FCFS, SJF, STCF, and Round Robin.
+
+OVERALL PROGRAM
+
+The user should create files for each process and write the CPU burst and arrival time in the format mentioned above. After typing "make" and then 
+"lab4" + processes, the program should output the average wait and turn around times for all four CPU scheduling algorithms learned in class.
+The program takes in command line arguments of each process and inserts the burst and arrival time values in a 2-dimensional array.
+Then, the program creates four thread methods for each algorithm. The 2-dimensional array is then passed to each thread method.
+Next, all four thread methods run in parallel and calculate the average wait and turn around times depending on the CPU scheduling algorithm.
+Lastly, we use mutex locks to print the average wait and turn around times for each thread method. The mutex locks ensures the print statements 
+stays together for each algorithm.
+
+WORK DISTRIBUTION
+
+Griffin Lavy: Completed main, FCFS, RoundRobin, Makefile, and the header file.
+Karl Chavez: Completed SJF, STCF, and readme file.     
